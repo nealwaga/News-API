@@ -1,45 +1,19 @@
-class Article:
-    '''
-    Class that instantiates objects of the news article objects of the news sources
-    '''
-    def __init__(self,author,description,time,url,image,title):
-        self.author = author
-        self.description = description
-        self.time = time
-        self.url = url
-        self.image = image
-        self.title = title
+from app import create_app
+from flask_script import Manager,Server
 
-class Category:
-    '''
-    Class that instantiates objects of the news categories objects of the news sources
-    '''
-    def __init__(self,author,description,time,url,image,title):
-        self.author = author
-        self.description = description
-        self.time = time
-        self.url = url
-        self.image = image
-        self.title = title
+# Creating app instance
+app = create_app('development')
 
-class Source:
-    '''
-    Source class to define source objects
-    '''
-    def __init__(self,id,name,description,url):
-        self.id = id
-        self.name = name
-        self.description = description
-        self.url = url
+manager = Manager(app)
+manager.add_command('server',Server)
+@manager.command
+def test():
+    """Run the unit tests."""
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
-class Headlines:
-    '''
-    Class that instantiates objects of the headlines categories objects of the news sources
-    '''
-    def __init__(self,author,description,time,url,image,title):
-        self.author = author
-        self.description = description
-        self.time = time
-        self.url = url
-        self.image = image
-        self.title = title
+
+
+if __name__ == '__main__':
+    manager.run()

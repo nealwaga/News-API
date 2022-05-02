@@ -1,4 +1,4 @@
-#!/home/neal/Documents/moringa-school-projects/Flask-Projects/News-API/virtual/bin/python
+#!/home/neal/Documents/moringa-school-projects/Flask-Projects/News-API/virtual/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

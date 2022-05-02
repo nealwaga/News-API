@@ -1,4 +1,4 @@
-#import os
+import os
 
 class Config:
     '''
@@ -6,7 +6,7 @@ class Config:
     '''
     NEWS_API_SOURCE_URL='https://newsapi.org/v2/sources?apiKey={}'
     # CAT_API_URL='https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey={}'
-    #NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
+    NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
     CAT_API_URL='https://newsapi.org/v2/top-headlines?country=us&category={}&apiKey={}'
 
 
@@ -19,8 +19,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    NEWS_API_KEY= '3a10d7cd5abf4e089804482dab06b7bd'
-    #pass
+    pass
 
 
 class DevConfig(Config):

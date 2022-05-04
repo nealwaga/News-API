@@ -1,36 +1,38 @@
-from flask import render_template,request,redirect,url_for
+#from flask import render_template,request,redirect,url_for
+#from . import main
+#from flask import render_template,request,redirect,url_for
+#from ..request import get_source,article_source,get_category,get_headlines
+from turtle import title
+from flask import render_template
 from . import main
-from flask import render_template,request,redirect,url_for
-from ..request import get_source,article_source,get_category,get_headlines
+from ..request import get_source, get_articles
+from ..model_sources import Source 
 
-#our views
-@main.route('/')
+#Views
+@main.route('/')  #Route defining the view function.
 def index():
     '''
     Root function returning index/home page with data
     '''
-    source= get_source()
-    headlines = get_headlines()
-    return render_template('index.html',sources=source, headlines = headlines)
+#Getting the popular categories    
+    general = get_source('general')
+    sports = get_source('sports')
+    business = get_source('business')
+    technology = get_source('technology')
+    entertainment = get_source('entertainment')
+    science = get_source('science')
 
-@main.route('/article/<id>')
-def article(id):
+    title = 'You Have Landed on the Best Site To Get the Latest News & Updates.'
+
+    return render_template('index.html', title=title, general=general, sports=sports, business=business, technology=technology, entertainment=entertainment, science=science) 
+
+@main.route('/<source_id>')
+def articles(source_id):
 
     '''
     View article page function that returns the various article details page and its data
     '''
-    # title= 'Articles'
-    articles = article_source(id)
-    return render_template('article.html',articles= articles,id=id )
-
-@main.route('/categories/<cat_name>')
-def category(cat_name):
-    '''
-    function to return the categories.html page and its content
-    '''
-    category = get_category(cat_name)
-    title = f'{cat_name}'
-    cat = cat_name
-
-    return render_template('categories.html',title = title,category = category, cat= cat_name)
+    news_source = get_articles(source_id)
+    title = f'Welcome to {source_id}'
+    return render_template('news.html', title=title, name = source_id, news = news_source)
     

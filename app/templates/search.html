@@ -1,0 +1,15 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%} {% block content %}
+<div class="container">
+
+    <div class="row">
+
+        <h3> Located {{ articles | count }} your article matches </h3>
+        <hr>
+        <ul>
+            {{ macro.sourceCategories(artilces)}}
+        </ul>
+
+    </div>
+
+</div>
+{% endblock %}

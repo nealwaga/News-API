@@ -51,6 +51,7 @@ As a user I would like to:
 
 ---
 **Technologies Used**
+---
   * Python 3.8
   * Flask
   * HTML

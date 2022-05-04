@@ -1,5 +1,5 @@
 import unittest
-from app.models import Category
+from app.model_articles import Articles
 
 class CategoryTest(unittest.TestCase):
     '''

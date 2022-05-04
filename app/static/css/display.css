@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  span {
+    color: crimson;
+  }
+  
+  .one {
+    background-color: black;
+    height: 50vh;
+    width: 95vw;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 0px 0px 50px 0px;
+  }
+  .footer {
+    height: 50vh;
+    width: 95vw;
+    margin-left: 40px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 50px 0px 0px 0px;
+    text-align: center;
+  }
+  .table {
+    margin-left: 150px;
+    margin-right: 150px;
+    color: aliceblue;
+    margin-top: 20px;
+  
+  }
+  .heading {
+    color: red;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+  }
+  tr {
+    margin: 0px;
+    padding: 0px;
+  }
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .text2 {
+    color: azure;
+    text-align: center;
+    margin-top: 30px;
+  
+    height: 250px;
+    width: 700px;
+    font-size: 20px;
+  }
+  .box1 {
+    display: flex;
+    text-align: center;
+    margin-left: 100px;
+  }
+  .box1 h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    color: red;
+  }
+  td:hover{
+      color: red;
+      text-decoration: underline;
+  }
+  .two{
+      background-color:red;
+  }
+  .two h1{
+      text-align: center;
+      color:aliceblue;
+      text-decoration: underline;
+      
+  }
+  .txt{
+    font-size: 21px;
+  }
+  

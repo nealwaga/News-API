@@ -5,7 +5,7 @@
 from turtle import title
 from flask import render_template
 from . import main
-from ..request import get_source, get_articles
+from ..request import get_sources, get_articles
 from ..model_sources import Source 
 
 #Views
@@ -15,12 +15,12 @@ def index():
     Root function returning index/home page with data
     '''
 #Getting the popular categories    
-    general = get_source('general')
-    sports = get_source('sports')
-    business = get_source('business')
-    technology = get_source('technology')
-    entertainment = get_source('entertainment')
-    science = get_source('science')
+    general = get_sources('general')
+    sports = get_sources('sports')
+    business = get_sources('business')
+    technology = get_sources('technology')
+    entertainment = get_sources('entertainment')
+    science = get_sources('science')
 
     title = 'You Have Landed on the Best Site To Get the Latest News & Updates.'
 

@@ -1,15 +1,15 @@
-import urllib.request, json  # urllib.request will help us create a connection to the API URL and send a request.
+import urllib.request, json  #urllib.request will help us create a connection to the API URL and send a request.
 from .model_sources import Source
 from .model_articles import Articles
 from datetime import datetime
 
-# Getting the api key
+#Getting the api key
 api_key = None
 
-# Getting the news base url
+#Getting the news base url
 base_url = None
 
-# Getting the articles
+#Getting the articles
 articles_url = None
 
 def configure_request(app):

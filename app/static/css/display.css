@@ -2,18 +2,16 @@
     margin: 0px;
     padding: 0px;
   }
+
   
-  span {
-    color: crimson;
-  }
   
   .one {
-    background-color: black;
-    height: 50vh;
+    background-color: white;
+    height: 10vh;
     width: 95vw;
     text-align: center;
-    color: aliceblue;
-    border-radius: 0px 0px 50px 0px;
+    color: black;
+    border-radius: 0px 0px 0px 0px;
   }
   .footer {
     height: 50vh;
@@ -32,7 +30,7 @@
   
   }
   .heading {
-    color: red;
+    color: black;
     font-size: 60px;
     font-family: 'Lobster', cursive;
   }
@@ -64,22 +62,37 @@
     margin-top: 30px;
     font-size: 40px;
     font-family: 'Lobster', cursive;
-    color: red;
+    color: white;
   }
   td:hover{
-      color: red;
       text-decoration: underline;
   }
   .two{
-      background-color:red;
+    height: -5px;
+      background-color: black;
   }
   .two h1{
-      text-align: center;
-      color:aliceblue;
-      text-decoration: underline;
-      
+      font-size: 20px;
+      color:aliceblue; 
   }
+
   .txt{
-    font-size: 21px;
+    font-size: 20px;
   }
+  
+  #navbarNav{
+    color: black;
+    background-color: black;
+  }
+
+  .a{
+    font-size: 60px;
+    height: auto;
+  }
+
+.b{
+  font-size: 20px;
+}
+
+
   
